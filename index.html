@@ -4,36 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles.css">
     <title>Tienda Muebles</title>
 </head>
 <body>
     <head>
-        <h1>Tienda Muebles</h1>
+        <h1 class="nombre-principal">Tienda <span>Muebles</span> </h1>
     </head>
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Nosotros</a>
-        <a href="#">Tienda</a>
-        <a href="#">Blot</a>
-        <a href="#">Galeria</a>
-        <a href="#">/Contacto</a>
-    </nav>
-
-    <section>
+    <div class="contenedor-nav">
+        <nav class="navegacion contenedor">
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Tienda</a>
+            <a href="#">Blog</a>
+            <a href="#">Galeria</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </div>
+    
+    <div class="hero"></div>
+    <section class="contenedor categorias">
         <h2>Categoria Productos</h2>
-        <div>
-            <img src="/img/categoria1.jpg" alt="Imagen">
-            <p>Oficina</p>
+        <div class="listado-categorias">
+            <div class="categoria">
+                <img src="/img/categoria1.jpg" alt="Imagen">
+                <a href="#">Oficina</a>
+            </div>
+            <div class="categoria">
+                <img src="/img/categoria2.jpg" alt="Imagen">
+                <a href="#">Hogar</a>
+            </div>
+            <div class="categoria">
+                <img src="/img/categoria3.jpg" alt="Imagen">
+                <a href="#">Cocina</a>
+            </div>
+
         </div>
-        <div>
-            <img src="/img/categoria2.jpg" alt="Imagen">
-            <p>Hogar</p>
-        </div>
-        <div>
-            <img src="/img/categoria3.jpg" alt="Imagen">
-            <p>Cocina</p>
-        </div>
+        
     </section>
 
     <section>
