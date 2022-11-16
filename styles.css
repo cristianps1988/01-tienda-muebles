@@ -147,4 +147,68 @@ h3{
 .texto-producto{
     text-align: center;
     color: var(--blanco);
+    padding: 2rem;
+}
+
+.texto-producto h3{
+    margin: 0;
+}
+
+.texto-producto p{
+    margin: 0 0 0.5rem 0;
+}
+
+.precio{
+    font-weight: bold;
+    font-size: 2.8rem;
+}
+
+.btn{
+    background-color: burlywood;
+    display: block;
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+}
+
+.btn:hover{
+    background-color: goldenrod;
+}
+
+.listado-productos{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.producto:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 7;
+}
+
+.producto:nth-child(2){
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.producto:nth-child(3){
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+.producto:nth-child(4){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.producto:nth-child(5){
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.producto:nth-child(6){
+    grid-column-start: 5;
+    grid-column-end: 7;
 }
