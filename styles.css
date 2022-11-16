@@ -9,10 +9,18 @@
 
 html {
     box-sizing: border-box;
-  }
-  *, *:before, *:after {
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
     box-sizing: inherit;
-  }
+}
+
+body{
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
 
 a {
     text-decoration: none;
@@ -25,22 +33,32 @@ img{
 }
 
 .contenedor{
-    max-width: 1000px;
+    max-width: 100rem;
     margin: 0 auto;
 }
 
 h1, h2, h3{
     font-family: 'Abril Fatface', cursive;
+    margin: 0 0 5rem 0;
 }
 
-body{
-    font-family: 'Dosis', sans-serif;
+h1{
+    font-size: 5rem;
 }
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
 
 /* Header */
 
 .nombre-principal{
-    padding: 30px;
+    padding: 3rem;
     text-align: center;
 }
 .nombre-principal span{
@@ -52,24 +70,29 @@ body{
 }
 
 .navegacion{
-    padding: 20px 0;
+    padding: 2rem 0;
     display: flex;
     justify-content: space-between;
 }
 
 .hero{
     background-image: url(/img/principal.jpg);
-    height: 450px;
+    height: 45rem;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 /* Categorias */
 
+.categorias{
+    margin-top: 5rem;
+}
+
 .listado-categorias{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 2rem;
 }
 
 .categorias h2{
@@ -79,13 +102,49 @@ body{
 .categoria a{
     display: block;
     text-align: center;
-    font-size: 20px;
-    padding: 15px;
+    padding: 1.5rem;
 }
 
 .categoria a:hover{
     background-color: var(--secundario);
     color: var(--blanco);
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+/* sobre nosotros */
+
+.sobre-nosotros{
+    background-image: linear-gradient(to right, transparent 50%, var(--secundario) 50%, var(--secundario) 100%), url(./img/nosotros.jpg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 100%, 100rem;
+    padding: 10rem 0;
+}
+
+.sobre-nosotros-flex{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sobre-nosotros-hijo{
+    flex-basis: 50%;
+    color: var(--blanco);
+    padding-left: 5rem;
+}
+
+/* Listado de productos */
+
+.contenido-principal{
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.producto{
+    background-color: var(--secundario);
+}
+
+.texto-producto{
+    text-align: center;
+    color: var(--blanco);
 }
