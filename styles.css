@@ -171,10 +171,12 @@ h3{
     font-weight: bold;
     padding: 1rem;
     transition: background-color .3s ease-out;
+    border: none;
 }
 
 .btn:hover{
     background-color: goldenrod;
+    cursor: pointer;
 }
 
 .listado-productos{
@@ -331,4 +333,46 @@ li{
     width: 32rem;
     height: 32rem;
     object-fit: cover;
+}
+
+/* Formulario */
+
+.formulario{
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.formulario fieldset{
+    border: .1rem solid rgba(128, 128, 128, 0.552);
+    margin-bottom: 2rem;
+
+}
+
+.formulario legend{
+    background-color: var(--secundario);
+    width: 100%;
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: .5rem;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo label{
+    flex-basis: 12rem;
+    text-align: left;
+}
+
+.campo input:not([type="radio"]),
+.campo textarea,
+.campo select{
+    flex: 1;
+    border: .1rem solid rgba(128, 128, 128, 0.552);
+    padding: 1rem;
 }
