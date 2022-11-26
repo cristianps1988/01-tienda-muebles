@@ -39,7 +39,7 @@ img{
 
 h1, h2, h3{
     font-family: 'Abril Fatface', cursive;
-    margin: 0 0 5rem 0;
+    margin: 0 0 2rem 0;
 }
 
 h1{
@@ -66,7 +66,7 @@ h3{
     font-size: 2rem;
 }
 
-@media (min-width: ){
+@media (min-width: 768px){
     h3{
         font-size: 3rem;
     }
@@ -139,7 +139,6 @@ h3{
     .listado-categorias{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
     }
 }
 
@@ -161,24 +160,47 @@ h3{
 }
 
 /* sobre nosotros */
-
 .sobre-nosotros{
-    background-image: linear-gradient(to right, transparent 50%, var(--secundario) 50%, var(--secundario) 100%), url(./img/nosotros.jpg);
+    background-image: linear-gradient(to bottom, transparent 50%, var(--secundario) 50%, var(--secundario) 100%), url(./img/nosotros.jpg);
     background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 100%, 100rem;
-    padding: 10rem 0;
+    background-position: center, top left;
+    background-size: 100%, 70rem;
+}
+
+
+@media (min-width: 768px){
+    .sobre-nosotros{
+        background-image: linear-gradient(to right, transparent 50%, var(--secundario) 50%, var(--secundario) 100%), url(./img/nosotros.jpg);
+        background-position: left center;
+        background-size: 100%, 100rem;
+    }
 }
 
 .sobre-nosotros-flex{
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+@media (min-width: 768px){
+    .sobre-nosotros-flex{
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 .sobre-nosotros-hijo{
-    flex-basis: 50%;
+    grid-row:  2 / 3;
     color: var(--blanco);
-    padding-left: 5rem;
+    padding: 5rem;
+}
+
+@media (min-width: 768px){
+    .sobre-nosotros-hijo{
+        flex-basis: 50%;
+        color: var(--blanco);
+        padding-left: 3rem;
+    }
 }
 
 /* Listado de productos */
@@ -188,8 +210,72 @@ h3{
     text-align: center;
 }
 
+@media (min-width: 768px){
+    .listado-productos{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+    }
+    
+    .producto:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 7;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+    
+    .producto:nth-child(1) img {
+        height: 45rem;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .producto:nth-child(2){
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    
+    .producto:nth-child(2) img, 
+    .producto:nth-child(3) img{
+        height: 30rem;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .producto:nth-child(3){
+        grid-column-start: 4;
+        grid-column-end: 7;
+    }
+    
+    .producto:nth-child(4){
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .producto:nth-child(5){
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+    
+    .producto:nth-child(6){
+        grid-column-start: 5;
+        grid-column-end: 7;
+    }
+}
+
 .producto{
     background-color: var(--secundario);
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px){
+    .producto{
+        margin-bottom: 0;
+    }
+}
+
+.producto:last-of-type{
+    margin-bottom: 0;
 }
 
 .texto-producto{
@@ -220,62 +306,18 @@ h3{
     padding: 1rem;
     transition: background-color .3s ease-out;
     border: none;
+    width: 100%;
+}
+
+@media (min-width: 768px){
+    .btn{
+        width: auto;
+    }
 }
 
 .btn:hover{
     background-color: goldenrod;
     cursor: pointer;
-}
-
-.listado-productos{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1rem;
-}
-
-.producto:nth-child(1){
-    grid-column-start: 1;
-    grid-column-end: 7;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-}
-
-.producto:nth-child(1) img {
-    height: 45rem;
-    width: 100%;
-    object-fit: cover;
-}
-
-.producto:nth-child(2){
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-
-.producto:nth-child(2) img, 
-.producto:nth-child(3) img{
-    height: 30rem;
-    width: 100%;
-    object-fit: cover;
-}
-
-.producto:nth-child(3){
-    grid-column-start: 4;
-    grid-column-end: 7;
-}
-
-.producto:nth-child(4){
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.producto:nth-child(5){
-    grid-column-start: 3;
-    grid-column-end: 5;
-}
-
-.producto:nth-child(6){
-    grid-column-start: 5;
-    grid-column-end: 7;
 }
 
 /* Footer */
@@ -286,14 +328,38 @@ h3{
     padding: 5rem 0 0 0;
 }
 
-.site-footer h3{
-    margin-bottom: .5rem;
+.site-footer p{
+    text-align: center;
 }
 
-.grid-footer{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+@media (min-width: 768px){
+    .site-footer p{
+        text-align: left;
+    }
+    .copy p{
+        text-align: center;
+    }
+}
+
+.site-footer h3{
+    display: block;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .grid-footer{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    .grid-footer > div{
+        margin-bottom: 0;
+    }
+}
+
+.grid-footer > div{
+    margin-bottom: 2rem;
 }
 
 .copy{
@@ -313,6 +379,13 @@ h3{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 3rem;
+}
+
+@media (min-width: 768px){
+    .informacion-nosotros{
+        padding: 0;
+    }
 }
 
 .informacion-nosotros p{
@@ -320,11 +393,16 @@ h3{
 }
 
 /* Blog */
+@media (min-width: 768px){
+    .contenedor-blog{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+    }
+}
 
-.contenedor-blog{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
+.entrada-blog{
+    padding: 0 2rem;
 }
 
 .entrada{
@@ -337,10 +415,11 @@ h3{
     border: none;
 }
 
-.entrada-meta{
-    display: flex;
-    justify-content: space-between;
-
+@media (min-width: 768px){
+    .entrada-meta{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .entrada-meta p{
@@ -373,8 +452,14 @@ li{
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+}
+
+@media (min-width: 768px){
+    .galeria{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .galeria img{
